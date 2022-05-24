@@ -1,0 +1,495 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/*NAV-BAR*/
+.show{
+    display: flex !important;
+}
+nav{
+    display: flex;
+    align-items:  center;
+    justify-content:  space-between;
+    padding: 0 5%;
+
+}
+nav ul{
+     display: flex;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+}
+nav ul li > a{
+    display: block;
+    position: relative;
+    padding: 20px 15px 10px 15px;
+    text-decoration: none;
+    color:white
+}
+nav ul li .link::before{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    background-color: white;
+    
+}
+nav ul li .link:hover::before {
+    transform: scaleX(1);
+}
+
+nav .more{
+    display: none;
+}
+
+nav .menu{
+    margin-top: 55px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    background-color: white;
+}
+nav .menu a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+
+}
+
+nav .menu a:hover{
+    background-color: black;
+    color: white;
+}
+
+nav .mobile{
+    display: none;
+    width: 100%;
+}
+ nav .mobile .header{
+    background-color: black;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+nav .mobile .header a{
+    color: white;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 10px;
+}
+nav .mobile .header #bmenu{
+    color:white;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+/* Links */
+nav .mobile .links{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.9);;
+}
+
+nav .mobile .links a{
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+
+}
+nav .mobile .links a:hover{
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+}
+/*HEADER*/
+
+header{
+    background-image: url(../img/halo-infinite-cover-darkmode.jpg);
+    background-size: cover;
+    background-position: center center ;
+    height: 100vh;
+}
+
+/* banner */
+h2{
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+}
+h2::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: -20px;
+    left: 0;
+
+    transform: scale(0.4) skew(-20deg);
+
+    background-color: greenyellow;
+}
+#banner{
+    font-size: 1.4em;
+    text-align: center;
+    padding: 32px;
+    width: 380px;
+    position: absolute;
+    z-index: 100;
+    top: 130px;
+    right: 90px;
+
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.green-button{
+    text-transform: uppercase;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 40px 10px 40px; 
+    margin: 15px 0px 10px 0px;
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.green-button:hover{
+    
+    background-color: rgb(138, 207, 33);
+    
+}
+.green-link{
+    text-transform: uppercase;
+    border: 0;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px 40px;
+    color: greenyellow;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.green-link::before{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    background-color: greenyellow;
+    
+}
+.green-link:hover::before{
+    transform: scaleX(1);
+}
+
+.w-75{
+    width: 75%;
+    margin: 0 auto;
+}
+h3{
+    font-size: 1.6em;
+    padding-top: 50px;
+    color: white;
+}
+
+#videos #slider #controls{
+    display: flex;
+    justify-content: center;
+}
+#videos #slider #controls #prev,
+#videos #slider #controls #next{
+    border: none;
+    height: 50px;
+    width: 80px;
+    background-color: rgba(58, 58, 58);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+#videos #slider #controls #prev:hover,
+#videos #slider #controls #next:hover{
+
+    background-color: rgb(37, 37, 37);
+
+}
+
+#videos #slider #current{
+    width: 90%;
+    margin: 50px auto;
+    border: solid 1px #04556e; 
+} 
+#videos h2{
+    margin-bottom: 30px;
+    font-size: 3.3rem;
+}
+#videos{
+    text-align: center;
+    padding: 50px 0;
+    background-image: url(../img/bg-videos.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    --blackmode: rgb(255, 255, 255, 0.3);
+    /* background-color: var(--blackmode); */
+    color: white;
+}
+#videos #slider #videos-container{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    overflow: auto;
+}
+#videos #slider #videos-container .item{
+    opacity: 0.9;
+    border: solid 1px #0d9ac5;
+    cursor: pointer;
+    overflow: hidden;
+    min-width: 180px;
+    height: 180px;
+}
+#videos #slider #videos-container .item a{
+    position: relative;
+
+}
+#videos #slider #videos-container .item img{
+    object-fit: contain;
+    min-width: 180px;
+    height: 180px;
+}
+#videos #slider #videos-container .item:hover img{
+    transition: opacity 0.3s ease;
+    opacity: 0.6;
+    object-fit: contain;
+}
+#videos #slider #videos-container .item a::before{
+    font-family: "Material Icons";
+    content:  "play_arrow"; 
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    display: block;
+    left: 120px;
+    top: -95px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.hipervideo{
+    position: relative;
+    padding-bottom: 60%;
+    height: 0;
+    margin: 0px 0px 0px 0px;
+}
+.hipervideo iframe{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+/* MULTIPLAYER */
+#Multiplayer{
+    height: 100vh;
+    background-image: url(../img/bg-multiplayer.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+
+}
+.info{
+    line-height: 1.2;
+    padding: 40px;
+    width: 400px;
+    margin-right: 50px;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    color: white;
+
+}
+.info h2{
+    font-size: 2.7em;
+  
+}
+.info p{
+    margin-top: 50px;
+}
+
+/* GET THE GAME */
+#shop{
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+}
+#shop h2{
+    color: white;
+}
+#shop .item-store{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+}
+#shop .item-store .left{
+    padding: 0px 20px;
+    width: 100%;
+}
+
+#shop .item-store .right{
+    text-align: left;
+    padding: 0 50px;
+    width: 80%;
+}
+#shop .item-store .left img{
+    width: 400px;
+}
+#shop h2{
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+#shop .item-store h3{
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+footer{
+    height: 600px;
+    background-image: url(../img/master-chief-darkmode.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+/*Media query PC*/
+@media screen and (max-width: 1230px){
+    nav .link-hide  {
+        display: none;
+    }
+   nav .more{
+        display: flex;
+    }
+    header{
+        background-position: center center center;
+        height: 80vh;
+    }
+    #banner{
+        position:initial !important;
+        z-index: 100;
+        width: 100%;
+    }
+    #Multiplayer{
+        background-position: -400px 0px;
+    }
+    .info{
+        width: 500px;
+        margin: 0 auto;
+    }
+    #shop .item-store{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+    #shop .item-store .left img{
+        width: 300px ;
+    }
+    #shop .item-store .right{
+        text-align: center;
+        width: 100%;
+    }
+    footer{
+        /* height: 400px; */
+        background-position: center center;
+    }
+}
+
+/*Media query Moible*/
+@media screen and (max-width: 740px){
+    .logo1{
+        width: 120px !important;
+    }
+    nav{
+        padding: 0px;
+        width: 100%;
+    }
+    
+    nav ul{
+        display: none;
+    }
+    
+    nav .mobile{
+        display: block;
+    }
+    header{
+        background-position: center 40px;
+        height: 50vh;
+    }
+    #banner{
+        position:initial !important;
+        z-index: 100;
+        width: 100%;
+    }
+
+    #slider #videos-container{
+        
+        display: none !important;
+    }
+    .info{
+        width: 400px ;
+        margin: 0 auto;
+    }
+    footer{
+        height: 300px;
+        background-position: center center;
+    }
+}
+
