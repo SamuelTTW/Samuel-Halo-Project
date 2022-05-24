@@ -1,1 +1,1 @@
-# Samuel-Halo-Project
+# Samue-Halo-Project
